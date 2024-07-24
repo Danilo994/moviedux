@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import '../styles.css';
 
 export default function MoviesGrid(){
+    
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        const m = ["a", "b", "c"];
+        setMovies(m);
+    }, []);
+
     return(
-        <div></div>
+        <div>{movies.length}</div>
     );
 }
